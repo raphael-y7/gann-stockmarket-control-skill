@@ -199,4 +199,5 @@ The point-based parameters in the book (a 3–5 point stop, adds every 10 points
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](./LICENSE)
+

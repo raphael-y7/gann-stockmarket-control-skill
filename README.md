@@ -199,4 +199,5 @@ Copy-Item -Recurse -LiteralPath (Join-Path $pack 'gann-stockmarket-control-skill
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](./LICENSE)
+
