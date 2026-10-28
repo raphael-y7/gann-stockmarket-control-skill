@@ -35,22 +35,22 @@ metadata:
 
 | 用户意图 | 先读 | 补读/备注 |
 |---|---|---|
-| 评估自己适不适合入市/有没有资格做交易；我该天天盯盘吗，多久看一次盘合适；帮我制定交易节奏和休整计划 | references/capabilities/readiness-gate-skill.md | references/capabilities/tape-reading-workflow-skill.md、references/capabilities/failure-mode-triage-skill.md |
-| 建立江恩式的看盘与记录流程；月线周线日线图各自看什么、以哪个为准；怎样不被盘中波动洗出来 | references/capabilities/tape-reading-workflow-skill.md | references/capabilities/volume-supply-diagnosis-skill.md、references/capabilities/readiness-gate-skill.md |
-| 这只票放量不涨/放量滞涨是什么意思；缩量下跌是不是跌不动了；换手率多高算异常；用成交量判断主力在吸筹还是出货 | references/capabilities/volume-supply-diagnosis-skill.md | references/capabilities/seven-zone-positioning-skill.md、references/capabilities/final-top-bottom-skill.md |
-| 现在市场处于什么阶段，高位还是低位；是不是过热了该清仓/是不是跌透了能抄底；无消息突然跳空低开说明什么 | references/capabilities/seven-zone-positioning-skill.md | references/capabilities/volume-supply-diagnosis-skill.md、references/capabilities/final-top-bottom-skill.md |
-| 次新股能不能买；老蓝筹很多年不动能碰吗；低价股是不是跌不动更安全；怎么跟踪板块轮动选类型 | references/capabilities/stock-type-filter-skill.md | references/capabilities/strength-weakness-ranking-skill.md、references/capabilities/stock-habits-profile-skill.md |
-| 帮我给这只票建个研究档案；现在这个价位买安全吗；这只票的历史支撑阻力位在哪 | references/capabilities/stock-habits-profile-skill.md | references/capabilities/final-top-bottom-skill.md、references/capabilities/breakout-execution-skill.md |
-| 怎么选出最强的股票；我的票大盘涨它不涨算弱势吗，该不该换；用突破上年高点做一份候选名单 | references/capabilities/strength-weakness-ranking-skill.md | references/capabilities/stock-type-filter-skill.md、references/capabilities/final-top-bottom-skill.md |
-| 这是最终顶部还是中期调整；是不是历史大底，能重仓抄底吗；突破十年高点意味着什么；帮我复盘指数的大结构 | references/capabilities/final-top-bottom-skill.md | references/capabilities/strength-weakness-ranking-skill.md、references/capabilities/breakout-execution-skill.md、references/capabilities/seven-zone-positioning-skill.md |
-| 长期横盘的低价股突然放量突破多年高点能追吗；怎么跟踪底部吸筹的大牛股生命周期 | references/capabilities/low-price-accumulation-skill.md | references/capabilities/final-top-bottom-skill.md、references/capabilities/volume-supply-diagnosis-skill.md |
-| 帮我按江恩12条规则检查这笔交易能不能做；开仓前需要检查哪些事项；我总管不住手乱开仓怎么办 | references/capabilities/pretrade-checklist-skill.md | references/capabilities/capital-stop-loss-skill.md、references/capabilities/pyramid-plan-skill.md |
-| 这笔该用多少仓位、我能承受多大亏损；止损单怎么设、挂了能不能撤；浮盈怎么保护不成亏损 | references/capabilities/capital-stop-loss-skill.md | references/capabilities/pretrade-checklist-skill.md、references/capabilities/pyramid-plan-skill.md |
-| 突破了该追吗、买点止损点设哪；假突破怎么防；首次新高和二次新高买哪个 | references/capabilities/breakout-execution-skill.md | references/capabilities/final-top-bottom-skill.md、references/capabilities/capital-stop-loss-skill.md |
-| 浮盈了怎么加仓、每次加多少；金字塔加码和摊平有什么区别；什么情况下不能加仓 | references/capabilities/pyramid-plan-skill.md | references/capabilities/capital-stop-loss-skill.md、references/capabilities/failure-mode-triage-skill.md |
-| 这个利好/利空消息该买还是该卖；突发利空跳空低开怎么应对；股票分红调整/增发怎么看；财报出来不涨反跌为什么 | references/capabilities/event-news-reaction-skill.md | references/capabilities/volume-supply-diagnosis-skill.md、references/capabilities/seven-zone-positioning-skill.md |
-| 帮我的持仓做年度体检；拿了两年了什么时候该卖；高股息/高收益产品安全吗 | references/capabilities/portfolio-annual-checkup-skill.md | references/capabilities/final-top-bottom-skill.md、references/capabilities/event-news-reaction-skill.md |
-| 我又亏了，帮我排查错在哪；越跌越补对不对；买断拿长期/对冲两只票行不行；盯盘盯得心态崩了怎么办 | references/capabilities/failure-mode-triage-skill.md | references/capabilities/pretrade-checklist-skill.md、references/capabilities/capital-stop-loss-skill.md、references/capabilities/pyramid-plan-skill.md |
+| 评估自己适不适合入市/有没有资格做交易；我该天天盯盘吗，多久看一次盘合适；帮我制定交易节奏和休整计划 | references/capabilities/readiness-gate.md | references/capabilities/tape-reading-workflow.md、references/capabilities/failure-mode-triage-skill.md |
+| 建立江恩式的看盘与记录流程；月线周线日线图各自看什么、以哪个为准；怎样不被盘中波动洗出来 | references/capabilities/tape-reading-workflow.md | references/capabilities/volume-supply-diagnosis.md、references/capabilities/readiness-gate.md |
+| 这只票放量不涨/放量滞涨是什么意思；缩量下跌是不是跌不动了；换手率多高算异常；用成交量判断主力在吸筹还是出货 | references/capabilities/volume-supply-diagnosis.md | references/capabilities/seven-zone-positioning.md、references/capabilities/final-top-bottom.md |
+| 现在市场处于什么阶段，高位还是低位；是不是过热了该清仓/是不是跌透了能抄底；无消息突然跳空低开说明什么 | references/capabilities/seven-zone-positioning.md | references/capabilities/volume-supply-diagnosis.md、references/capabilities/final-top-bottom.md |
+| 次新股能不能买；老蓝筹很多年不动能碰吗；低价股是不是跌不动更安全；怎么跟踪板块轮动选类型 | references/capabilities/stock-type-filter.md | references/capabilities/strength-weakness-ranking.md、references/capabilities/stock-habits-profile.md |
+| 帮我给这只票建个研究档案；现在这个价位买安全吗；这只票的历史支撑阻力位在哪 | references/capabilities/stock-habits-profile.md | references/capabilities/final-top-bottom.md、references/capabilities/breakout-execution.md |
+| 怎么选出最强的股票；我的票大盘涨它不涨算弱势吗，该不该换；用突破上年高点做一份候选名单 | references/capabilities/strength-weakness-ranking.md | references/capabilities/stock-type-filter.md、references/capabilities/final-top-bottom.md |
+| 这是最终顶部还是中期调整；是不是历史大底，能重仓抄底吗；突破十年高点意味着什么；帮我复盘指数的大结构 | references/capabilities/final-top-bottom.md | references/capabilities/strength-weakness-ranking.md、references/capabilities/breakout-execution.md、references/capabilities/seven-zone-positioning.md |
+| 长期横盘的低价股突然放量突破多年高点能追吗；怎么跟踪底部吸筹的大牛股生命周期 | references/capabilities/low-price-accumulation.md | references/capabilities/final-top-bottom.md、references/capabilities/volume-supply-diagnosis.md |
+| 帮我按江恩12条规则检查这笔交易能不能做；开仓前需要检查哪些事项；我总管不住手乱开仓怎么办 | references/capabilities/pretrade-checklist.md | references/capabilities/capital-stop-loss.md、references/capabilities/pyramid-plan.md |
+| 这笔该用多少仓位、我能承受多大亏损；止损单怎么设、挂了能不能撤；浮盈怎么保护不成亏损 | references/capabilities/capital-stop-loss.md | references/capabilities/pretrade-checklist.md、references/capabilities/pyramid-plan.md |
+| 突破了该追吗、买点止损点设哪；假突破怎么防；首次新高和二次新高买哪个 | references/capabilities/breakout-execution.md | references/capabilities/final-top-bottom.md、references/capabilities/capital-stop-loss.md |
+| 浮盈了怎么加仓、每次加多少；金字塔加码和摊平有什么区别；什么情况下不能加仓 | references/capabilities/pyramid-plan.md | references/capabilities/capital-stop-loss.md、references/capabilities/failure-mode-triage-skill.md |
+| 这个利好/利空消息该买还是该卖；突发利空跳空低开怎么应对；股票分红调整/增发怎么看；财报出来不涨反跌为什么 | references/capabilities/event-news-reaction.md | references/capabilities/volume-supply-diagnosis.md、references/capabilities/seven-zone-positioning.md |
+| 帮我的持仓做年度体检；拿了两年了什么时候该卖；高股息/高收益产品安全吗 | references/capabilities/portfolio-annual-checkup.md | references/capabilities/final-top-bottom.md、references/capabilities/event-news-reaction.md |
+| 我又亏了，帮我排查错在哪；越跌越补对不对；买断拿长期/对冲两只票行不行；盯盘盯得心态崩了怎么办 | references/capabilities/failure-mode-triage-skill.md | references/capabilities/pretrade-checklist.md、references/capabilities/capital-stop-loss.md、references/capabilities/pyramid-plan.md |
 
 **非能力类查询**：
 - 书名/作者/章节/整书概览 → references/overview.md

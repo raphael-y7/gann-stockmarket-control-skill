@@ -1,0 +1,331 @@
+schema_version: 1
+bundle_id: bundle.gann-stockmarket-control-skill
+book:
+  title: 江恩股市操盘术（专业解读版）
+  source_pack: gann-stockmarket-control-skill
+  original_title: Truth of the Stock Tape
+  author: '[美] 威廉·D.江恩（William D. Gann）'
+  translator: 唐璐 译；张艺博 点评
+  publisher: 人民邮电出版社（股票投资百年经典译丛）
+  era_note: 原著1923年；点数参数为当时美股绝对价位口径，A股使用须按百分比/波动率归一（多处由张艺博点评背书）
+  sister_skill_note: 与已安装技能 gann-trend-theory-skill（《江恩股市趋势理论》专业解读版，同一原著的另一译本）为姊妹关系；本 Bundle 定位差异化——按"操盘全流程SOP"组织并内嵌张艺博A股适配层，编译为 single 单入口，与对方的能力域查询式工具箱并存互为近邻负例
+  language: zh-CN
+entry:
+  name: gann-stockmarket-control-skill
+  description: 当用户要按江恩《股市操盘术》（Truth of the Stock Tape, 1923，专业解读版）的完整流程做股票投资分析与操盘时使用：从入市准备、看盘节奏、三图体系，到供求诊断、七区域定位、选股强弱名单、顶底判定、突破执行、金字塔加仓、事件应对、持仓体检、失败排障的端到端SOP，每步内嵌张艺博点评的A股适配（看盘周期三分法、换手率7%警觉线、永不满仓、弱势股屏蔽、五三零案例等）。适用问题如"帮我按江恩的方法把这只票从头到尾过一遍""我的持仓该做年度体检了""帮我建一套江恩式的看盘和交易体系（月/周/日线记什么、每天怎么复盘）""盯盘盯到心态崩、一年交易几十次太频繁，江恩会说我该定什么节奏""我又亏了，帮我按流程排查错在哪"。不适用于：单点概念与单条规则查询（"12条规则是哪12条""放量滞涨什么意思"类教科书问题——优先路由姊妹技能 gann-trend-theory-skill）、基本面估值建模（原书否定账面价值路线）、日内高频执行、具体点位预测（时间周期算法原书未公开）、期货专用细则。姊妹技能 gann-trend-theory-skill 按"某一条规则/判据是什么"的能力域单点问答；本技能承接"建体系、走流程、做体检、按我的情况整改"的用户情境型任务。
+  core_principles:
+  - 价格由供求决定，量必须相对股本衡量（换手率口径）；大行情前必有长时间吸筹或派发，幅度越大准备时间越长。
+  - 趋势=累进的高低序列；月图定位置、周图定主流、日图只择时且警惕假行情。
+  - 一单未下先过12条规则：单笔风险3~5点（换算3~5%）、止损单必设不取消不上移、不逆势、有疑虑就退出、不预设目标价。
+  - 三大致命错误=过度交易、不下止损单、摊薄亏损；盯盘两年改主意1200次90%是错的——远离市场，紧盯趋势。
+  - 卖出弱势股买进强势股；突破上年高点名单法选股；二次新高比首次更安全；突破确立区间+原底（顶）外3点止损。
+  - 金字塔只顺浮盈方向递减加码（100→50→30→20→10），趋势启动初期才加，吸筹/派发区与顶底10%区禁加。
+  - 消息几乎已被贴现：利好出而价跌=已贴现；消息与图抵触时信图；突发利空先退出现望半小时再定。
+  - 1920年代绝对点数参数用于A股前必须归一化；点评A股适配（换手7%警觉、永不满仓、弱势股屏蔽）为本版特色内容。
+  out_of_scope:
+  - 教科书式单点概念问答与基本面估值建模（原书否定账面价值路线）
+  - 日内高频交易执行与具体未来点位预测（时间周期算法原书未公开且不可检验）
+  - 期货专有操作细则（棉花/小麦/玉米参数仅作参考域，见 references）
+  - 姊妹技能 gann-trend-theory-skill 已按能力域覆盖的单点查询场景（本入口承接流程型任务）
+  stop_conditions:
+  - 用户要求保证盈利或确定点位时：声明本方法论无统计检验、作者自述预测不可证伪，不提供保证。
+  - 拒绝把1920年代固定点数直接套用于A股；引用时必须标注换算口径为整理者补丁（点评背书）。
+  - 吸筹/派发判定只作证据强度评估，不得当作确定结论；原文疑误处（(?原文如此)）不得作为规则依据。
+  - 路由顺序：先查 out_of_scope，再按流程阶段定位加载对应阶段卡；复合任务按"流程走到哪一步"裁决主卡，单次最多加载2张。
+router_entry:
+  name: gann-stockmarket-control-skill-router
+  description: 《江恩股市操盘术（专业解读版）》（Truth of the Stock Tape, 1923）pack 来源路由入口：当用户要按江恩操盘术的完整流程做股票投资分析与操盘时使用——建看盘与交易体系、按流程把个股从头过一遍、持仓年度体检、失败模式排查，以及入市准备节奏、三图体系、量价供求诊断、七区域定位、标的类型过滤、个股习性档案、强弱名单选股、最终顶底判定、低价吸筹生命周期、12条规则开单闸门、资金止损、突破执行、金字塔加仓、消息事件反应等 16 个流程阶段（每步内嵌张艺博点评的A股适配）。不适用于：单点概念与单条规则查询（优先路由姊妹技能 gann-trend-theory-skill）、基本面估值建模、日内高频执行、具体点位预测、期货专用细则。
+promotion_budget: 8
+capabilities:
+- capability_id: cap.gann-stockmarket-control-skill.readiness-gate
+  revision: 1
+  status: active
+  slug: readiness-gate
+  title: 入市准备与看盘节奏（流程第0步）
+  importance: high
+  importance_rationale: 第一篇全部7章+点评三分法；散户高换手/过度盯盘的第一道闸，流程的准入条件。
+  one_liner: 看盘节奏由交易周期决定（日短/周中/月长三档）；年交易≤5~6次+每年两次强制休整才准入市。
+  intents:
+  - 评估自己适不适合入市/有没有资格做交易
+  - 我该天天盯盘吗，多久看一次盘合适
+  - 帮我制定交易节奏和休整计划
+  keywords: [入市准备, 看盘节奏, 专注, 四素质, 强制休整, 低频交易, tape reading, readiness]
+  card: cards/readiness-gate-skill.md
+  promotion: {destination: router}
+  also_read: [tape-reading-workflow, failure-mode-triage-skill]
+  frontmatter:
+    description: 流程第0步。判断用户是否具备入市条件并设定看盘节奏：看盘周期三分法（日内短线天天盯/上班族每周周线/月年级别基本不看）、专注少数股票、四素质自检（耐心/勇气/知识/健康专注）、年交易≤5~6次与每年两次强制休整。当用户问"我该多久看一次盘""我适合炒股吗"时用。不做具体买卖点决策（后续阶段卡）；单点规则查询用姊妹技能 gann-trend-theory-skill。
+- capability_id: cap.gann-stockmarket-control-skill.tape-reading-workflow
+  revision: 1
+  status: active
+  slug: tape-reading-workflow
+  title: 看盘纪律与月/周/日三图体系（流程第1步）
+  importance: high
+  importance_rationale: 第3/10/14/29/32章方法论载体；所有判定的证据基础；点评"软件替代手绘、纪律不替"。
+  one_liner: 不盯盘，收盘后15~20分钟维护月（全历史）/周（一年）/日（60天）三图；日图服从周月图，防假行情。
+  intents:
+  - 建立江恩式的看盘与记录流程
+  - 月线周线日线图各自看什么、以哪个为准
+  - 怎样不被盘中波动洗出来
+  keywords: [三图体系, 月线, 周线, 日线, 假行情, 时间因素, 收盘后复盘, three timeframes]
+  card: cards/tape-reading-workflow-skill.md
+  promotion: {destination: router}
+  also_read: [volume-supply-diagnosis, readiness-gate]
+  frontmatter:
+    description: 流程第1步。建立"不看盘的看盘"证据体系：月图定多年位置、周图定主流走势、日图只找进出场点，每天收盘后15~20分钟更新；日图假行情多，必须服从周月图；时间因素=阻力位维持数周不破。当用户要建复盘流程、问多周期信号矛盾听谁时用。不预测点位；盯盘技巧类问题先回第0步改节奏。
+- capability_id: cap.gann-stockmarket-control-skill.volume-supply-diagnosis
+  revision: 1
+  status: active
+  slug: volume-supply-diagnosis
+  title: 成交量供求诊断（流程第2步）
+  importance: critical
+  importance_rationale: 第3/10/14/21/32章方法输入端；点评换手率7%线为A股直接可用的口径转换。
+  one_liner: 量必须相对股本（换手率）衡量：高位放量滞涨=派发预警，缩量止跌=抛压枯竭，同区间5%级震荡10~20次=吸筹/派发进行中。
+  intents:
+  - 这只票放量不涨/放量滞涨是什么意思
+  - 缩量下跌是不是跌不动了
+  - 换手率多高算异常
+  - 用成交量判断主力在吸筹还是出货
+  keywords: [成交量, 换手率, 放量滞涨, 缩量止跌, 波动次数, 天量, volume, turnover]
+  card: cards/volume-supply-diagnosis-skill.md
+  promotion: {destination: router}
+  also_read: [seven-zone-positioning, final-top-bottom]
+  frontmatter:
+    description: 流程第2步。用量价关系诊断供求状态：换手率校准（相对流通盘；上涨中单日换手>7%警觉——点评经验值）、放量滞涨=派发、缩量止跌=抛压枯竭、区间内波动计数、单周天量=行情结束标志。当用户问放量/缩量含义、换手率异常时用。结论是"证据强度"不是确定性判词；无量的纯消息问题转事件反应卡。
+- capability_id: cap.gann-stockmarket-control-skill.seven-zone-positioning
+  revision: 1
+  status: active
+  slug: seven-zone-positioning
+  title: 七区域阶段定位与极端反向（流程第3步）
+  importance: high
+  importance_rationale: 第11/24/30章给仓位决策提供位置语境；顶部第一信号与极端反向是防大错件。
+  one_liner: 以价值中枢分七区：上方三区渐热至派发（第一信号=无消息开盘跌1~5点），下方三区渐冷至恐慌买进区；舆情一边倒+价格极端=逆向复核。
+  intents:
+  - 现在市场处于什么阶段，高位还是低位
+  - 是不是过热了该清仓/是不是跌透了能抄底
+  - 无消息突然跳空低开说明什么
+  keywords: [七区域, 正常区域, 派发区, 吸筹区, 第一信号, 极端反转, 过热, zones]
+  card: cards/seven-zone-positioning-skill.md
+  promotion: {destination: router}
+  also_read: [volume-supply-diagnosis, final-top-bottom]
+  frontmatter:
+    description: 流程第3步。给个股或大盘做阶段定位：七区域状态表（正常区+上下各三区）、顶部第一信号（无消息开盘跌1~5点=供过于求饱和）、极端区域反向（全民狂热=派发区离场；人人悲观+红利削减=恐慌买进区）。当用户问贵不贵/过热吗/能抄底吗时用。区域无量化边界（原书即如此），须以个股为准；具体顶底结构判定转第7步顶底卡。
+- capability_id: cap.gann-stockmarket-control-skill.stock-type-filter
+  revision: 1
+  status: active
+  slug: stock-type-filter
+  title: 标的类型过滤与轮动（流程第4步）
+  importance: high
+  importance_rationale: 第13/16章选股第一层漏斗；点评"上市不足三年不参与/逢新必炒定位/A股退市差异"为关键本土修正。
+  one_liner: 只做活跃且年振幅达标的类型（20~100点级）；新股繁荣期高价发行须定位投机+速退；跌破支撑序列的老股失去支持即卖。
+  intents:
+  - 次新股能不能买
+  - 老蓝筹很多年不动能碰吗
+  - 低价股是不是跌不动更安全
+  - 怎么跟踪板块轮动选类型
+  keywords: [新股, 次新股, 老股, 低价股, 年振幅, 板块轮动, 流行股, new issues]
+  card: cards/stock-type-filter-skill.md
+  promotion: {destination: router}
+  also_read: [strength-weakness-ranking, stock-habits-profile]
+  frontmatter:
+    description: 流程第4步。选股第一层漏斗：新股/老股/高低价/活跃度四维过滤+年振幅门槛（20~100点级才值得做）+轮动跟踪（领头股活跃期5~10年）；点评A股适配（上市不足三年不参与、逢新必炒先定位投机、壳资源逻辑随退市改革重估）。当用户问次新股/老股/低价股/板块轮动时用。个股强弱排序转第5步。
+- capability_id: cap.gann-stockmarket-control-skill.stock-habits-profile
+  revision: 1
+  status: active
+  slug: stock-habits-profile
+  title: 个股习性档案与安全位置（流程第5步）
+  importance: high
+  importance_rationale: 第12章交易前建档+第18章恐慌支撑/繁荣阻力法；"安全位置"快查直接拦截高位追入。
+  one_liner: 交易前建档：顶底形态/触及计数/反向运动5~7点；现价距最高近、距最低远=不安全；恐慌年支撑与繁荣年阻力定安全价位，风险缩到2~3点。
+  intents:
+  - 帮我给这只票建个研究档案
+  - 现在这个价位买安全吗
+  - 这只票的历史支撑阻力位在哪
+  keywords: [习性档案, 安全位置, 阻力位, 支撑位, 触及计数, 反向运动, habits]
+  card: cards/stock-habits-profile-skill.md
+  promotion: {destination: router}
+  also_read: [final-top-bottom, breakout-execution]
+  frontmatter:
+    description: 流程第5步。交易前为个股建档：顶底形态分类（扁平顶=领涨股/陡直顶=后发股及其派发位置差）、历史价位触及计数、反向运动点数、猛跌两天规则、二次测试触发、安全位置判定（10→50→40例：现价两头不靠=不买）。当用户问"这个价位安全吗""帮我研究这只票"时用。点数须换算百分比；真假突破的执行转第9步。
+- capability_id: cap.gann-stockmarket-control-skill.strength-weakness-ranking
+  revision: 1
+  status: active
+  slug: strength-weakness-ranking
+  title: 强弱判定与年度名单（流程第6步·选股核心）
+  importance: critical
+  importance_rationale: 第17~19章+第22章两份名单实证；点评"超级强势股/弱势股屏蔽"为A股单边市直接可用的选股法则。
+  one_liner: 五步判强（熊市抗跌/率先反弹/底部逐月抬升/突破多年阻力/回踩前高获撑）；大盘新高它不新高=弱势黑名单；年初突破上年高点名单=候选池。
+  intents:
+  - 怎么选出最强的股票
+  - 我的票大盘涨它不涨算弱势吗，该不该换
+  - 用突破上年高点做一份候选名单
+  keywords: [强势股, 弱势股, 相对强弱, 年度名单, 52周新高, 突破上年高点, strength]
+  card: cards/strength-weakness-ranking-skill.md
+  promotion: {destination: router}
+  also_read: [stock-type-filter, final-top-bottom]
+  frontmatter:
+    description: 流程第6步。个股vs指数/同类比强弱：五步强势判定链（熊市抗跌→率先反弹→底部逐月抬升→突破多年阻力→回踩前高获支撑，配2~3点止损）、三条弱势黑名单（不随大盘创新高/跌破支撑序列/反弹递减）、突破上年高点年度名单法（候选/回避/派发疑似三名单）。点评：大盘跌它不跌=强势内因，持续越久血统越纯；弱势股直接屏蔽。当用户选股、问强弱、做年度名单时用。
+- capability_id: cap.gann-stockmarket-control-skill.final-top-bottom
+  revision: 1
+  status: active
+  slug: final-top-bottom
+  title: 最终顶底判定（流程第7步）
+  importance: critical
+  importance_rationale: 第20/23/24/25章终局判定；顶底误判代价最大；点评"顶底是走出来的"边界必须入卡。
+  one_liner: 累进高低位=趋势本身；多年确立区间被突破几乎必走新高新低；双顶三顶计数、尖顶下派发/尖底上吸筹、窄幅久盘位置定多空；时间与幅度成正比。
+  intents:
+  - 这是最终顶部还是中期调整
+  - 是不是历史大底，能重仓抄底吗
+  - 突破十年高点意味着什么
+  - 帮我复盘指数的大结构
+  keywords: [累进高低位, 最终顶部, 最终底部, 多年突破, 双顶, 三重顶, 窄幅派发, top bottom]
+  card: cards/final-top-bottom-skill.md
+  promotion: {destination: router}
+  also_read: [strength-weakness-ranking, breakout-execution, seven-zone-positioning]
+  frontmatter:
+    description: 流程第7步。终局结构判定：累进高低位序列（日/周/月/年通用）、多年箱体突破（确立越久越可信+二次新高更安全+能量规则：相隔越久幅度越大）、指数结构复盘模板（双底三顶计数/窄幅久盘派发/呆滞辨析看位置/尖顶下派发-尖底上吸筹）、时间-幅度正比。当用户问历史大顶大底、大结构复盘时用。点评边界：顶底是走出来的不是算出来的，本卡只给证据链不给保证。
+- capability_id: cap.gann-stockmarket-control-skill.low-price-accumulation
+  revision: 1
+  status: active
+  slug: low-price-accumulation
+  title: 低价吸筹股生命周期（流程第7b步·特殊结构）
+  importance: medium
+  importance_rationale: 第25章玉米制品单处讲透的结构性机会模板；需多年数据+超级耐心（点评），频次低于主流程。
+  one_liner: 多年低位蛰伏+熊市抗跌+突破十年高点=吸筹完成顺势追涨；高位区间反弹五六次不超前高=转空；跌破区间下沿=派发完成。
+  intents:
+  - 长期横盘的低价股突然放量突破多年高点能追吗
+  - 怎么跟踪底部吸筹的大牛股生命周期
+  keywords: [低价股, 吸筹, 生命周期, 十年高点, 玉米制品, accumulation]
+  card: cards/low-price-accumulation-skill.md
+  promotion: {destination: router}
+  also_read: [final-top-bottom, volume-supply-diagnosis]
+  frontmatter:
+    description: 流程第7b步（特殊结构）。跟踪多年低位吸筹股的全生命周期：筛选（历史高价股的低价蛰伏区）→熊市抗跌测试→突破N年所有售价=吸筹完成顺势追涨→高位区间反弹不创新高计数转空→跌破区间=派发完成。点评门槛：没有超级耐心不碰；A股壳逻辑随退市改革需重估。当用户问长期横盘票破多年高点、底部大牛股时用。
+- capability_id: cap.gann-stockmarket-control-skill.pretrade-checklist
+  revision: 1
+  status: active
+  slug: pretrade-checklist
+  title: 开单前12条规则检查（流程第8步·开单闸门）
+  importance: critical
+  importance_rationale: 第8章全书纪律核心；"要么全守要么全弃"的二值闸门，直接拦截三大致命错误于事前。
+  one_liner: 一单未下先过12关：资本量→止损→禁过度交易→浮盈提保本→不逆势→有疑虑退出→活跃股→均摊→不设目标价→卖点四问→累积盈余→分红免疫。
+  intents:
+  - 帮我按江恩12条规则检查这笔交易能不能做
+  - 开仓前需要检查哪些事项
+  - 我总管不住手乱开仓怎么办
+  keywords: [12条规则, 开单检查, 交易计划, 卖点四问, 过度交易, twelve rules]
+  card: cards/pretrade-checklist-skill.md
+  promotion: {destination: router}
+  also_read: [capital-stop-loss, pyramid-plan]
+  frontmatter:
+    description: 流程第8步。一单未下先过12关的交易前检查清单（第8章全文规则）：资金档位与单笔风险、止损预设、频率自查、浮盈3~4点提保本、顺势、疑虑即退、标的活跃、均摊方案（点评：<50万资金不必分仓）、放弃目标价（美钢94.875例）、卖点四问、盈余先行、分红免疫。输出通过/不通过+整改项。当用户要开仓评估、管不住手时用；被否决的单不给"部分通过"。
+- capability_id: cap.gann-stockmarket-control-skill.capital-stop-loss
+  revision: 1
+  status: active
+  slug: capital-stop-loss
+  title: 资金与止损管理（流程第9步）
+  importance: critical
+  importance_rationale: 止损五条纪律+可亏次数算术是生存件；第8章规则1/2/3/4/11+第27/31章跨章合读。
+  one_liner: 先算可亏次数（本金÷单笔风险≥10）再开仓；止损单五纪律=每笔必设/不取消/不上移/越早越好/了结才撤；浮盈3~4点提到保本。
+  intents:
+  - 这笔该用多少仓位、我能承受多大亏损
+  - 止损单怎么设、挂了能不能撤
+  - 浮盈怎么保护不成亏损
+  keywords: [资金管理, 止损单, 可亏次数, 移动止损, 保本, 仓位, G.T.C., stop loss]
+  card: cards/capital-stop-loss-skill.md
+  promotion: {destination: router}
+  also_read: [pretrade-checklist, pyramid-plan]
+  frontmatter:
+    description: 流程第9步。资金与风险算术+止损执行纪律：资金档位表（A股换算为单笔风险≤3~5%）、可亏次数≥10的算术、止损单机制（G.T.C.条件单；触发按市价成交可能更差）、五条纪律、浮盈3~4点提保本+止损跟进、连亏两三次退出观望。当用户问仓位/止损执行/浮盈保护时用。跳空跌停可能使止损无法按价成交——A股必须补充此风险提示。
+- capability_id: cap.gann-stockmarket-control-skill.breakout-execution
+  revision: 1
+  status: active
+  slug: breakout-execution
+  title: 突破买卖执行（流程第10步）
+  importance: critical
+  importance_rationale: 第22章买卖点位核心落地规则+点评"突破前一切无效"；与止损配对成完整执行件。
+  one_liner: 数月/年确立区间的突破才有效：原底（顶）附近进场+区间外3点止损+二次新高加仓更安全；信号出现即市价行动，不挂小差价限价。
+  intents:
+  - 突破了该追吗、买点止损点设哪
+  - 假突破怎么防
+  - 首次新高和二次新高买哪个
+  keywords: [突破, 突破买入, 3点止损, 二次新高, 假突破, 区间上下沿, breakout]
+  card: cards/breakout-execution-skill.md
+  promotion: {destination: router}
+  also_read: [final-top-bottom, capital-stop-loss]
+  frontmatter:
+    description: 流程第10步。突破买卖的执行规则：只认数月至数年确立区间的突破；原底（顶）附近进场，止损设区间外3点（换算）；首次新高常回调、二次新高更安全；行情启动立即进场不等回落；不挂小差价限价单（0.125美元教训）；突破后跌回区间=认赔出局。点评：突破前一切分析无效，区间上下限是唯一裁决。当用户问该不该追、买卖点+止损配对时用。
+- capability_id: cap.gann-stockmarket-control-skill.pyramid-plan
+  revision: 1
+  status: active
+  slug: pyramid-plan
+  title: 金字塔顺势递减加仓计划（流程第11步）
+  importance: high
+  importance_rationale: 第9章唯一推荐的加仓法+第27/29/31章时机与禁加区；与摊平严格对立是纠错高发点。
+  one_liner: 只顺浮盈方向：首仓后每顺行一档（10点≈10%）递减加仓100→50→30→20→10并同步上移止损；吸筹/派发区与顶底10%区禁加；转势之初才启动。
+  intents:
+  - 浮盈了怎么加仓、每次加多少
+  - 金字塔加码和摊平有什么区别
+  - 什么情况下不能加仓
+  keywords: [金字塔加仓, 递减加码, 摊平, 浮盈加仓, 止损跟进, pyramiding]
+  card: cards/pyramid-plan-skill.md
+  promotion: {destination: router}
+  also_read: [capital-stop-loss, failure-mode-triage-skill]
+  frontmatter:
+    description: 流程第11步。顺势递减加仓计划表：首仓后每顺行一档加仓且数量递减（100→50→30→20→10股原型，A股按百分比/股数换算）+止损逐级跟进使总风险递减；只在趋势启动初期启动；吸筹/派发区间内与接近顶底10%区禁加；浮亏加码=摊平=三大致命错误之一，一律否决。当用户问加仓节奏、区分加码与摊平时用。
+- capability_id: cap.gann-stockmarket-control-skill.event-news-reaction
+  revision: 1
+  status: active
+  slug: event-news-reaction
+  title: 消息贴现判定与事件反应（流程第12步）
+  importance: high
+  importance_rationale: 第4/5/22/26章规则集；A股消息驱动高频场景；点评五三零案例与两会映射为本土化直接素材。
+  one_liner: 利好出而价跌=已贴现；突发利空先退出现望半小时再定强弱；股息降低不破前低=买点，高位加息/额外分红=派发信号，市价增发旧股不涨=清仓。
+  intents:
+  - 这个利好/利空消息该买还是该卖
+  - 突发利空跳空低开怎么应对
+  - 股票分红调整/增发怎么看
+  - 财报出来不涨反跌为什么
+  keywords: [消息贴现, 利好出尽, 突发利空, 股息, 增发, 高送转, news discounting]
+  card: cards/event-news-reaction-skill.md
+  promotion: {destination: router}
+  also_read: [volume-supply-diagnosis, seven-zone-positioning]
+  frontmatter:
+    description: 流程第12步。消息与事件反应规则集：贴现判定式（利好+价跌=已贴现；利空+放量抛售=确认下跌；利好利空落地先看走势）、突发消息SOP（大幅高低开先退出观望→半小时看支撑→反弹弱且破当日低=续跌）、股息/增发三规则、热度-波动-媒体三高派发预警、言论动机审计（有货要卖的人永远乐观）。点评：五三零式突发先保命、A股"大选"=两会周期。当用户问消息该买该卖时用。
+- capability_id: cap.gann-stockmarket-control-skill.portfolio-annual-checkup
+  revision: 1
+  status: active
+  slug: portfolio-annual-checkup
+  title: 持仓年度体检与征兆即卖（流程第13步）
+  importance: high
+  importance_rationale: 第26章持有端闭环；点评以开放资源替代付费专家；高收益=信用风险对A股高息股/理财直接可用。
+  one_liner: 每年至少一次逐只体检：变坏征兆即卖不等清盘；异常高收益先查信用；自绘持仓月度峰谷图；重复触及计数定支撑阻力。
+  intents:
+  - 帮我的持仓做年度体检
+  - 拿了两年了什么时候该卖
+  - 高股息/高收益产品安全吗
+  keywords: [持仓体检, 征兆即卖, 高收益风险, 持仓图, 年度检查, checkup]
+  card: cards/portfolio-annual-checkup-skill.md
+  promotion: {destination: router}
+  also_read: [final-top-bottom, event-news-reaction]
+  frontmatter:
+    description: 流程第13步。持有端闭环：每年至少一次全面体检（征兆/支撑跌破/收益率异常/月度峰谷图更新），变坏征兆出现立即卖出不等众人清盘；高收益=信用风险（法国债券例）、机构名气≠担保；点评以网络开放资源+独立判断替代原书的付费专家服务。当用户要做持仓体检、问长期持有人何时卖、高息资产是否安全时用。
+- capability_id: cap.gann-stockmarket-control-skill.failure-mode-triage-skill
+  revision: 1
+  status: active
+  slug: failure-mode-triage-skill
+  title: 失败模式排障与运作方法辨析（流程第14步·纠错回路）
+  importance: critical
+  importance_rationale: 第8/9章+表9-1+期货篇通用禁令+点评A股修正；"我又亏了错在哪"的高频入口，五大运作方法辨析防止选错路线。
+  one_liner: 三大致命错误优先级=过度交易>无止损>摊平；盯盘两年改主意1200次；买断/摊平/比例法/套头四法禁用，金字塔唯一推荐；永不满仓（点评）。
+  intents:
+  - 我又亏了，帮我排查错在哪
+  - 越跌越补对不对
+  - 买断拿长期/对冲两只票行不行
+  - 盯盘盯得心态崩了怎么办
+  keywords: [失败模式, 三大致命错误, 摊平, 买断, 套头, 盯盘, 排障, triage]
+  card: cards/failure-mode-triage-skill.md
+  promotion: {destination: router}
+  also_read: [pretrade-checklist, capital-stop-loss, pyramid-plan]
+  frontmatter:
+    description: 流程第14步（纠错回路）。亏损归因与路线排障：三大致命错误自查（过度交易>不下止损>摊薄亏损）、盯盘成本账（1200次改主意90%错）、期望持仓即退出、连亏两三次退出观望、纸面利润兑现；五大运作方法辨析（买断批判+表9-1、做空安全规则、金字塔唯一推荐、比例法否定、套头/对锁禁令）；点评A股修正（永不满仓、退市错觉、补仓神话）。当用户带着亏损/坏习惯来问"错在哪"时用。

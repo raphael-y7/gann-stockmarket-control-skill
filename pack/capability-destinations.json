@@ -7,63 +7,63 @@
   "destinations": {
     "cap.gann-stockmarket-control-skill.readiness-gate": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/readiness-gate-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/readiness-gate.md"
     },
     "cap.gann-stockmarket-control-skill.tape-reading-workflow": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/tape-reading-workflow-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/tape-reading-workflow.md"
     },
     "cap.gann-stockmarket-control-skill.volume-supply-diagnosis": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/volume-supply-diagnosis-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/volume-supply-diagnosis.md"
     },
     "cap.gann-stockmarket-control-skill.seven-zone-positioning": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/seven-zone-positioning-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/seven-zone-positioning.md"
     },
     "cap.gann-stockmarket-control-skill.stock-type-filter": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/stock-type-filter-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/stock-type-filter.md"
     },
     "cap.gann-stockmarket-control-skill.stock-habits-profile": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/stock-habits-profile-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/stock-habits-profile.md"
     },
     "cap.gann-stockmarket-control-skill.strength-weakness-ranking": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/strength-weakness-ranking-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/strength-weakness-ranking.md"
     },
     "cap.gann-stockmarket-control-skill.final-top-bottom": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/final-top-bottom-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/final-top-bottom.md"
     },
     "cap.gann-stockmarket-control-skill.low-price-accumulation": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/low-price-accumulation-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/low-price-accumulation.md"
     },
     "cap.gann-stockmarket-control-skill.pretrade-checklist": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/pretrade-checklist-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/pretrade-checklist.md"
     },
     "cap.gann-stockmarket-control-skill.capital-stop-loss": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/capital-stop-loss-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/capital-stop-loss.md"
     },
     "cap.gann-stockmarket-control-skill.breakout-execution": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/breakout-execution-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/breakout-execution.md"
     },
     "cap.gann-stockmarket-control-skill.pyramid-plan": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/pyramid-plan-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/pyramid-plan.md"
     },
     "cap.gann-stockmarket-control-skill.event-news-reaction": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/event-news-reaction-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/event-news-reaction.md"
     },
     "cap.gann-stockmarket-control-skill.portfolio-annual-checkup": {
       "served_by": "gann-stockmarket-control-skill-router",
-      "card": "gann-stockmarket-control-skill-router/references/capabilities/portfolio-annual-checkup-skill.md"
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/portfolio-annual-checkup.md"
     },
     "cap.gann-stockmarket-control-skill.failure-mode-triage-skill": {
       "served_by": "gann-stockmarket-control-skill-router",
