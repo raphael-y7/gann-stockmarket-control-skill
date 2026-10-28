@@ -1,0 +1,73 @@
+{
+  "generated_by": "cangjie-tools v2.5.0",
+  "bundle_id": "bundle.gann-stockmarket-control-skill",
+  "router_entrypoint": "gann-stockmarket-control-skill-router",
+  "entrypoint_count": 1,
+  "capability_count": 16,
+  "destinations": {
+    "cap.gann-stockmarket-control-skill.readiness-gate": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/readiness-gate-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.tape-reading-workflow": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/tape-reading-workflow-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.volume-supply-diagnosis": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/volume-supply-diagnosis-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.seven-zone-positioning": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/seven-zone-positioning-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.stock-type-filter": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/stock-type-filter-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.stock-habits-profile": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/stock-habits-profile-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.strength-weakness-ranking": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/strength-weakness-ranking-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.final-top-bottom": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/final-top-bottom-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.low-price-accumulation": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/low-price-accumulation-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.pretrade-checklist": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/pretrade-checklist-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.capital-stop-loss": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/capital-stop-loss-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.breakout-execution": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/breakout-execution-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.pyramid-plan": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/pyramid-plan-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.event-news-reaction": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/event-news-reaction-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.portfolio-annual-checkup": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/portfolio-annual-checkup-skill.md"
+    },
+    "cap.gann-stockmarket-control-skill.failure-mode-triage-skill": {
+      "served_by": "gann-stockmarket-control-skill-router",
+      "card": "gann-stockmarket-control-skill-router/references/capabilities/failure-mode-triage-skill.md"
+    }
+  }
+}

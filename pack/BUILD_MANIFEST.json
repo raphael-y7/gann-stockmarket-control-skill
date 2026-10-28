@@ -1,0 +1,47 @@
+{
+  "tool": "cangjie-tools v2.5.0",
+  "published_hashes": {
+    "capability-destinations.json": "ae9bfa3ebf25e25580856cd5c48e7b36336019c57cfc8f17e903c747ab6b92ff",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\breakout-execution.md": "cb1a0c4bbac9b0b51680fc112cf80a513ec64f64991771ce7a42dad63bed0b41",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\capital-stop-loss.md": "1517dbec0c9cfdd789b149702aa58e14e95b9b9b90ff14da34129a21f4017c7c",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\event-news-reaction.md": "7693c7f6fe0450c77e04a2c8dad0174de7b69f4917390f7f6cfa99184facf578",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\failure-mode-triage-skill.md": "7184a783b8ca4502875a1aef1ed960022a8b6e61d41293625a59235b63f9faa3",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\final-top-bottom.md": "715a1cdb85a6735493abf47a055457495836411ffca9dab030590241b6c9bbf4",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\low-price-accumulation.md": "da4de233b25b35fa010359e1f9ceaf5f87fdf09a436aaf985d56ea6f5df80ac9",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\portfolio-annual-checkup.md": "2c08c851fc505a80fbcaf9cd6003a01f9cfedf7afcc6bee9440e973652d4f32e",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\pretrade-checklist.md": "7e476ca3f370c408afd07f3342f6d6d7762304095dbd335f57c64d0b0f73ba09",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\pyramid-plan.md": "7634fca320ee0908ae17ecabf022871b37e0a1f174ee1708931d44616b13800a",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\readiness-gate.md": "2c21fd5e73b41d68f127202739c4988aa3b4344d29e2bc19cf9d1071c9ef6371",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\seven-zone-positioning.md": "1216b554a97c623e8f5708a4a8c6d339ac596e9b5dc3a7943b621c5317a3fd3b",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\stock-habits-profile.md": "99230b126d77b20b3f832fba6a3aadb8beefbfcf7df65833044d14cce06d514a",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\stock-type-filter.md": "c23c8acb5c9e10038f9af2025ac9f9ea1c214df8da0eb8c478aa461b66b302af",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\strength-weakness-ranking.md": "7369f62fb9f7537f77076ff94bc6fb3d21f51ce34c561ca455c56ca911afe2ac",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\tape-reading-workflow.md": "be288577cdfba691438d68fac943446d7408d0fd43361b0a34b777ccd86f27bc",
+    "gann-stockmarket-control-skill-router\\references\\capabilities\\volume-supply-diagnosis.md": "b588436261e24b50e7479e9658992fcf72e5c29bb403e0fa77c838d4f0facc65",
+    "gann-stockmarket-control-skill-router\\references\\capability-index.md": "53bf8351991555e57c49285758f576acb31a17e0bc5f6b43f75293e249b7bd1f",
+    "gann-stockmarket-control-skill-router\\references\\cheatsheet.md": "e3abc33b6459e7ff79e4adbc100678fc4a34bc169ae7421e02264d8e74c7f8de",
+    "gann-stockmarket-control-skill-router\\references\\glossary.md": "f49c756f0aea79d4645d1ec2e38a764c546a1100bf4c7ea4a21554aa9f280515",
+    "gann-stockmarket-control-skill-router\\references\\overview.md": "554cd85b963c4203494b0598945f8263eef3825186bfd2e62ded0906feb364b5",
+    "gann-stockmarket-control-skill-router\\SKILL.md": "88587032803828c22d2303ec0c5efb86f0069bce9a623308009d483f3b3f4f22"
+  },
+  "note": "update/重编译前比对 published_hashes；检测到本地手改不得静默覆盖",
+  "bundle_id": "bundle.gann-stockmarket-control-skill",
+  "bundle_sha256": "38eec86c6c2c3e87b84a12cb37d2650abfa5fb4ab00c1731b4ba65f2be64c97c",
+  "variant": "pack",
+  "run_id": "run-20261024-181155-864a93",
+  "decision": {
+    "schema_version": 1,
+    "requested": "pack",
+    "selected": "pack",
+    "decision_policy": "single-first-v1",
+    "skill_budget": 8,
+    "promoted_count": 0,
+    "capability_count": 16,
+    "reasons": [
+      "用户显式选择 pack，auto 决策器不覆盖用户选择"
+    ],
+    "alternative": "single（1 个入口 + 16 张内部能力卡）",
+    "user_confirmed": true,
+    "preserve_strategy_on_update": true
+  }
+}
