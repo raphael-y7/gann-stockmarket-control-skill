@@ -188,7 +188,7 @@ Copy-Item -Recurse -LiteralPath (Join-Path $pack 'gann-stockmarket-control-skill
 
 ## 来源
 
-- 《江恩股市操盘术》
+- 《江恩股市操盘术》威廉·D·江恩 著
 - 全书蒸馏，共产出 16 张能力卡
 
 ## 声明

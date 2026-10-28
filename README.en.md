@@ -188,7 +188,7 @@ Ask: "Walk this stock through Gann's method from start to finish." The agent sho
 
 ## Sources
 
-- *Gann Stockmarket Control*
+- *Gann Stockmarket Control* by William D. Gann
 - Distilled from the whole book, producing 16 capability cards
 
 ## Notice
