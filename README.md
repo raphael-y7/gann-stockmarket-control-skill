@@ -122,6 +122,7 @@ gann-stockmarket-control-skill/
 ├── README.en.md           ← English version
 ├── LICENSE                ← MIT
 ├── BOOK_OVERVIEW.md       ← 阶段 0 产出：全书 Adler 分析
+├── DIGEST.md              ← 阶段 5 产出：面向读者的整书精华长文
 ├── INDEX.md               ← 阶段 3 产出：skill 总览 + 依赖关系
 ├── verified.md            ← 通过三重验证的 16 个单元
 ├── TEST_SUMMARY.md        ← 阶段 4 产出：压力测试摘要
