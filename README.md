@@ -107,7 +107,7 @@
 
 ## 测试与验证
 
-本仓库连生成过程的测试材料一起发布：`evals/test-prompts.json` 是入口级触发与边界用例，`evals/test-results.md` 是逐项评分结果——包含失败与回炉修复的完整过程，不是只留通过记录。
+本仓库连生成过程的测试材料一起发布：入口级触发与边界用例在各 skill 目录下的 `test-prompts.json` 里（`single/gann-stockmarket-control-skill/test-prompts.json`、`pack/gann-stockmarket-control-skill-router/test-prompts.json`），逐项评分结果见仓库根目录的 [`test-results.md`](./test-results.md)——包含失败与回炉修复的完整过程，不是只留通过记录。
 
 - **触发盲测**：11 例（5 例 should_trigger、3 例 should_not_trigger、3 例 edge），最终 11 / 11 PASS
 - **诱饵容错**：3 例跨技能混淆 / 近邻流派 / 非能力域全部正确拦截或路由，无一误触本入口
@@ -118,46 +118,31 @@
 
 ```text
 gann-stockmarket-control-skill/
-├── README.md                      ← 你正在看的
-├── README.en.md                   ← English version
-├── LICENSE                        ← MIT
-├── BOOK_OVERVIEW.md               ← 整书理解（Adler 四步拆解，阶段 0 产出）
-├── verified.md                    ← 16 个能力单元的三重验证结论
-├── INDEX.md                       ← Skill 地图：能力总表 + 依赖关系 + 加载顺序
-├── CANGJIE_ADAPTATION.md          ← 仓颉适配说明：文本状态 / 蒸馏目标 / 证据规则 / 使用边界
-├── TEST_SUMMARY.md                ← 阶段 4 压力测试摘要（测试范围 / 结构检查 / 结果）
-├── candidates/                    ← 阶段 1 五提取器的候选池原文（347 条，可审计）
-│   ├── frameworks.md              ← 框架候选 50 条
-│   ├── principles.md              ← 原则候选 148 条
-│   ├── cases.md                   ← 案例候选 89 条
-│   ├── counter-examples.md        ← 反例候选 39 条
-│   └── glossary.md                ← 术语候选 21 条
-├── bundle/                        ← 蒸馏中间产物（可审计的源头）
-│   ├── verified.yaml              ← 16 张能力卡的规范定义（本仓库的单一事实源）
-│   ├── book/
-│   │   ├── overview.md            ← 整书概览
-│   │   └── glossary.md            ← 术语表
-│   └── cards/                     ← 16 张能力卡（R / I / A1 / A2 / E / B 六段）
-├── single/                        ← 单一入口模式
-│   └── gann-stockmarket-control-skill/
-│       ├── SKILL.md               ← 入口：触发条件 + 路由表 + 加载规则
-│       ├── BUILD_MANIFEST.json    ← 编译清单与文件哈希
-│       ├── test-prompts.json      ← 入口级触发与边界用例（11 例，与 evals/ 同源）
-│       └── references/
-│           ├── overview.md        ← 整书概览
-│           ├── capability-index.md  ← 完整意图与关键词索引
-│           ├── cheatsheet.md      ← 决策规则速查
-│           ├── glossary.md        ← 术语表
-│           └── capabilities/      ← 16 张能力卡
-├── pack/                          ← compact pack（来源路由入口）
-│   ├── BUILD_MANIFEST.json
-│   ├── capability-destinations.json
-│   └── gann-stockmarket-control-skill-router/
-│       ├── SKILL.md               ← 来源路由入口
-│       └── references/            ← 16 张卡 + 索引，供 router 内部调用
-└── evals/                          ← 生成过程的测试材料
-    ├── test-prompts.json           ← 入口级触发与边界用例
-    └── test-results.md             ← 逐项评分与失败修复记录
+├── README.md              ← 你正在看的
+├── README.en.md           ← English version
+├── LICENSE                ← MIT
+├── BOOK_OVERVIEW.md       ← 阶段 0 产出：全书 Adler 分析
+├── INDEX.md               ← 阶段 3 产出：skill 总览 + 依赖关系
+├── verified.md            ← 通过三重验证的 16 个单元
+├── TEST_SUMMARY.md        ← 阶段 4 产出：压力测试摘要
+├── CANGJIE_ADAPTATION.md  ← 仓颉适配说明
+├── GITHUB_REPO.md         ← 仓库元数据
+├── test-results.md        ← 测试结果记录
+├── candidates/            ← 阶段 1 产出：原始候选池
+│   ├── frameworks.md      ← 框架与方法候选
+│   ├── principles.md      ← 原则 / 规则 / 计算候选
+│   ├── cases.md           ← 书中案例候选
+│   ├── counter-examples.md← 反例与边界候选
+│   └── glossary.md        ← 术语候选
+├── rejected/              ← 阶段 1.5 产出：被淘汰的单元 + 原因
+├── bundle/                ← 编译事实源
+│   ├── verified.yaml      ← 能力元数据、判据与去向
+│   ├── cards/             ← 能力卡源文件（六段结构）
+│   └── book/              ← overview.md + glossary.md
+├── single/                ← single 模式（1 个入口 + 全部能力卡）
+│   └── gann-stockmarket-control-skill/SKILL.md  ← 入口：触发 + 路由表 + 加载规则
+└── pack/                  ← pack 模式（1 个路由入口 + 0 个晋级 skill）
+    └── */SKILL.md         ← 1 个 skill（router 入口），附带 test-prompts.json
 ```
 
 ## 如何使用

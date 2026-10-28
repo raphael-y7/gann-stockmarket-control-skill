@@ -107,7 +107,7 @@ One constraint shaped this distillation: the book is a different Chinese transla
 
 ## Testing and verification
 
-The repository ships the generation-time test material as well: `evals/test-prompts.json` holds the entry-level trigger and boundary cases, and `evals/test-results.md` holds the item-by-item scoring record — including the failures and the rework that fixed them, not only the passing rows.
+The repository ships the generation-time test material as well: the entry-level trigger and boundary cases live in the `test-prompts.json` of each skill directory (`single/gann-stockmarket-control-skill/test-prompts.json`, `pack/gann-stockmarket-control-skill-router/test-prompts.json`), and the item-by-item scoring record is [`test-results.md`](./test-results.md) at the repository root — including the failures and the rework that fixed them, not only the passing rows.
 
 - **Trigger blind tests**: 11 cases (5 should_trigger, 3 should_not_trigger, 3 edge), final result 11 / 11 PASS
 - **Decoy tolerance**: all 3 decoys (cross-skill confusion, neighbouring school, out-of-domain) were correctly blocked or routed, none falsely triggering this entry
@@ -118,46 +118,31 @@ The repository ships the generation-time test material as well: `evals/test-prom
 
 ```text
 gann-stockmarket-control-skill/
-├── README.md                      ← the Chinese version
-├── README.en.md                   ← you are reading this
-├── LICENSE                        ← MIT
-├── BOOK_OVERVIEW.md               ← whole-book understanding (Adler four-step, stage 0 output)
-├── verified.md                    ← three-fold verification results for the 16 units
-├── INDEX.md                       ← skill map: capability table + dependencies + load order
-├── CANGJIE_ADAPTATION.md          ← Cangjie adaptation note: text status / goals / evidence rules / boundaries
-├── TEST_SUMMARY.md                ← stage 4 stress-test summary (scope / structure check / results)
-├── candidates/                    ← raw candidate pool from the five stage-1 extractors (347 items, auditable)
-│   ├── frameworks.md              ← 50 framework candidates
-│   ├── principles.md              ← 148 principle candidates
-│   ├── cases.md                   ← 89 case candidates
-│   ├── counter-examples.md        ← 39 counter-example candidates
-│   └── glossary.md                ← 21 glossary candidates
-├── bundle/                        ← distillation intermediates (the auditable source)
-│   ├── verified.yaml              ← the canonical definition of the 16 cards (single source of truth)
-│   ├── book/
-│   │   ├── overview.md            ← whole-book overview
-│   │   └── glossary.md            ← glossary
-│   └── cards/                     ← the 16 capability cards (R / I / A1 / A2 / E / B)
-├── single/                        ← one-entry mode
-│   └── gann-stockmarket-control-skill/
-│       ├── SKILL.md               ← entry: trigger conditions + router table + load rules
-│       ├── BUILD_MANIFEST.json    ← build manifest and file hashes
-│       ├── test-prompts.json      ← entry-level trigger and boundary cases (11 items, same source as evals/)
-│       └── references/
-│           ├── overview.md        ← whole-book overview
-│           ├── capability-index.md  ← full intent and keyword index
-│           ├── cheatsheet.md      ← decision-rule cheat sheet
-│           ├── glossary.md        ← glossary
-│           └── capabilities/      ← the 16 capability cards
-├── pack/                          ← compact pack (source router entry)
-│   ├── BUILD_MANIFEST.json
-│   ├── capability-destinations.json
-│   └── gann-stockmarket-control-skill-router/
-│       ├── SKILL.md               ← source router entry
-│       └── references/            ← the 16 cards + indexes, called internally by the router
-└── evals/                          ← generation-time test material
-    ├── test-prompts.json           ← entry-level trigger and boundary cases
-    └── test-results.md             ← item-by-item scoring and fix record
+├── README.md              ← Chinese version
+├── README.en.md           ← you are reading this
+├── LICENSE                ← MIT
+├── BOOK_OVERVIEW.md       ← stage 0 output: Adler whole-book analysis
+├── INDEX.md               ← stage 3 output: skill map + dependencies
+├── verified.md            ← 16 units that passed triple verification
+├── TEST_SUMMARY.md        ← stage 4 output: stress-test summary
+├── CANGJIE_ADAPTATION.md  ← cangjie adaptation notes
+├── GITHUB_REPO.md         ← repository metadata
+├── test-results.md        ← test result records
+├── candidates/            ← stage 1 output: raw candidate pool
+│   ├── frameworks.md      ← framework and method candidates
+│   ├── principles.md      ← principle / rule / calculation candidates
+│   ├── cases.md           ← case candidates from the book
+│   ├── counter-examples.md← counter-example and boundary candidates
+│   └── glossary.md        ← terminology candidates
+├── rejected/              ← stage 1.5 output: rejected units + reasons
+├── bundle/                ← compilation source of truth
+│   ├── verified.yaml      ← capability metadata, criteria and destinations
+│   ├── cards/             ← capability card sources (six sections)
+│   └── book/              ← overview.md + glossary.md
+├── single/                ← single-mode build (one entry + all capability cards)
+│   └── gann-stockmarket-control-skill/SKILL.md  ← entry: triggers + routing table + loading rules
+└── pack/                  ← pack-mode build (one router + 0 promoted skills)
+    └── */SKILL.md         ← 1 skill (the router entry), shipping a test-prompts.json
 ```
 
 ## How to use
