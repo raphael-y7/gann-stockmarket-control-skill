@@ -124,6 +124,14 @@ gann-stockmarket-control-skill/
 ├── BOOK_OVERVIEW.md               ← 整书理解（Adler 四步拆解，阶段 0 产出）
 ├── verified.md                    ← 16 个能力单元的三重验证结论
 ├── INDEX.md                       ← Skill 地图：能力总表 + 依赖关系 + 加载顺序
+├── CANGJIE_ADAPTATION.md          ← 仓颉适配说明：文本状态 / 蒸馏目标 / 证据规则 / 使用边界
+├── TEST_SUMMARY.md                ← 阶段 4 压力测试摘要（测试范围 / 结构检查 / 结果）
+├── candidates/                    ← 阶段 1 五提取器的候选池原文（347 条，可审计）
+│   ├── frameworks.md              ← 框架候选 50 条
+│   ├── principles.md              ← 原则候选 148 条
+│   ├── cases.md                   ← 案例候选 89 条
+│   ├── counter-examples.md        ← 反例候选 39 条
+│   └── glossary.md                ← 术语候选 21 条
 ├── bundle/                        ← 蒸馏中间产物（可审计的源头）
 │   ├── verified.yaml              ← 16 张能力卡的规范定义（本仓库的单一事实源）
 │   ├── book/
@@ -134,6 +142,7 @@ gann-stockmarket-control-skill/
 │   └── gann-stockmarket-control-skill/
 │       ├── SKILL.md               ← 入口：触发条件 + 路由表 + 加载规则
 │       ├── BUILD_MANIFEST.json    ← 编译清单与文件哈希
+│       ├── test-prompts.json      ← 入口级触发与边界用例（11 例，与 evals/ 同源）
 │       └── references/
 │           ├── overview.md        ← 整书概览
 │           ├── capability-index.md  ← 完整意图与关键词索引

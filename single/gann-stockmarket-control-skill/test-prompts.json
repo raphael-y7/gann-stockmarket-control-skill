@@ -1,0 +1,83 @@
+{
+  "skill": "gann-stockmarket-control-skill",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "帮我按江恩操盘术的完整流程把这只票过一遍：它两年横盘8~15块，上周放量突破15.8",
+      "expected_behavior": "调用 gann-stockmarket-control-skill，按流程路由：区间确立→breakout-execution 执行参数（止损区间外3%）→ 提示先过 pretrade-checklist",
+      "notes": "正面场景：完整流程任务（多步组合）"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我的持仓拿了两年多了，想按江恩的方法做一次年度体检",
+      "expected_behavior": "调用 gann-stockmarket-control-skill → portfolio-annual-checkup：逐只征兆走查/支撑跌破/收益率异常/月度峰谷图",
+      "notes": "正面场景：持有端体检（本技能特色流程步）"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我又亏了，越跌越补已经补了三次，本金只剩四成，帮我排查到底错在哪",
+      "expected_behavior": "调用 gann-stockmarket-control-skill → failure-mode-triage-skill：命中摊薄亏损（三大致命错误之三），输出诊断表+处方",
+      "notes": "正面场景：纠错回路"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "上班族，每天午休都刷半小时行情软件，一年交易四五十次，总觉得越看越错，江恩会怎么说",
+      "expected_behavior": "调用 gann-stockmarket-control-skill → readiness-gate：看盘周期三分法定位（第2档周线）、年交易次数超频整改",
+      "notes": "正面场景：节奏体检"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "想用江恩的方法建一套自己的看盘和记录流程，月线周线日线分别记什么",
+      "expected_behavior": "调用 gann-stockmarket-control-skill → tape-reading-workflow：三图分工+每日15~20分钟流程+日图假行情警告",
+      "notes": "正面场景：建体系"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "江恩十二条交易规则具体是哪十二条？给我逐条列一下",
+      "expected_behavior": "路由姊妹技能 gann-trend-theory-skill（twelve-trading-rules-skill 能力域查询）；gann-stockmarket-control-skill 是流程闸门版，单点列举查询不触发",
+      "notes": "诱饵：同一原著姊妹技能的场景（跨技能混淆硬性要求）"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我看看这家公司的财报，营业收入和现金流怎么样，值不值得价值投资",
+      "expected_behavior": "不触发任何江恩技能；基本面分析超出两技能范围（原书否定账面价值路线）",
+      "notes": "诱饵：非能力域"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "用缠论给我画画这只票的笔和线段，现在到哪个中枢了",
+      "expected_behavior": "路由 chanlun 技能；江恩体系不接数浪/画笔请求",
+      "notes": "诱饵：近邻流派"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "这只票连续三周换手15%，价格才涨了两个点，主力是不是在出货？我该跑吗",
+      "expected_behavior": "调用 gann-stockmarket-control-skill → volume-supply-diagnosis：高位放量滞涨=派发预警（证据强度），但需位置叠加（seven-zone/final-top-bottom）才给行动建议；输出含'等突破方向'而非直接喊跑",
+      "notes": "边界：单点量价问题——若用户明确要单点分析，姊妹技能 accumulation-distribution-skill 也可接；主判据是用户用了'主力出货'判断语（江恩量价框架内），可触发但输出必须是证据分级"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "帮我预测一下大盘下个月具体到什么点位",
+      "expected_behavior": "不提供点位预测；两技能均触发判停（时间周期算法原书未公开、不可检验），说明并给可做的替代（结构证据链）",
+      "notes": "边界：预测请求——触发技能但触发'拒绝承诺'停机条款"
+    },
+    {
+      "id": "edge-03",
+      "type": "edge_case",
+      "prompt": "我只想知道'放量滞涨'这个词是什么意思，不用分析我的票",
+      "expected_behavior": "教科书式单点概念问答——直接简答或路由姊妹技能/glossary；不启动 gann-stockmarket-control-skill 流程",
+      "notes": "边界：概念查询 vs 流程任务的分界"
+    }
+  ]
+}

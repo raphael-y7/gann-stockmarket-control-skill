@@ -124,6 +124,14 @@ gann-stockmarket-control-skill/
 ├── BOOK_OVERVIEW.md               ← whole-book understanding (Adler four-step, stage 0 output)
 ├── verified.md                    ← three-fold verification results for the 16 units
 ├── INDEX.md                       ← skill map: capability table + dependencies + load order
+├── CANGJIE_ADAPTATION.md          ← Cangjie adaptation note: text status / goals / evidence rules / boundaries
+├── TEST_SUMMARY.md                ← stage 4 stress-test summary (scope / structure check / results)
+├── candidates/                    ← raw candidate pool from the five stage-1 extractors (347 items, auditable)
+│   ├── frameworks.md              ← 50 framework candidates
+│   ├── principles.md              ← 148 principle candidates
+│   ├── cases.md                   ← 89 case candidates
+│   ├── counter-examples.md        ← 39 counter-example candidates
+│   └── glossary.md                ← 21 glossary candidates
 ├── bundle/                        ← distillation intermediates (the auditable source)
 │   ├── verified.yaml              ← the canonical definition of the 16 cards (single source of truth)
 │   ├── book/
@@ -134,6 +142,7 @@ gann-stockmarket-control-skill/
 │   └── gann-stockmarket-control-skill/
 │       ├── SKILL.md               ← entry: trigger conditions + router table + load rules
 │       ├── BUILD_MANIFEST.json    ← build manifest and file hashes
+│       ├── test-prompts.json      ← entry-level trigger and boundary cases (11 items, same source as evals/)
 │       └── references/
 │           ├── overview.md        ← whole-book overview
 │           ├── capability-index.md  ← full intent and keyword index
