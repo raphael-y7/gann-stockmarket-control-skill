@@ -125,6 +125,8 @@ gann-stockmarket-control-skill/
 ├── DIGEST.md              ← 阶段 5 产出：面向读者的整书精华长文
 ├── INDEX.md               ← 阶段 3 产出：skill 总览 + 依赖关系
 ├── verified.md            ← 通过三重验证的 16 个单元
+├── coverage-audit.md      ← 阶段 1.5 产出：原书任务覆盖审计
+├── needs-review.md        ← 阶段 1.5 产出：待核查事项与缺口
 ├── TEST_SUMMARY.md        ← 阶段 4 产出：压力测试摘要
 ├── CANGJIE_ADAPTATION.md  ← 仓颉适配说明
 ├── GITHUB_REPO.md         ← 仓库元数据
